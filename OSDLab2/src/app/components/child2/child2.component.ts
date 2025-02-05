@@ -15,6 +15,6 @@ export class Child2Component {
     ){}
     
     displayDoubleCount(){
-      this.signalService.getDoubleCount();
+      return this.signalService.getDoubleCount();
     }
 }
