@@ -18,10 +18,14 @@ export class AppComponent {
       private signalService:SignalService){}
   //button increment
   increment(){
+    console.log("AppComponent: Increment button clicked");
     this.signalService.increment();
+    console.log("AppComponent: Count after increment:", this.signalService.getCount());
   }
   //button decrement
   decrement(){
+    console.log("AppComponent: Decrement button clicked");
     this.signalService.decrement();
+    console.log("AppComponent: Count after decrement:", this.signalService.getCount());
   }
 }

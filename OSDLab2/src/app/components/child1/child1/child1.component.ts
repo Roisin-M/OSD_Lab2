@@ -15,6 +15,8 @@ export class Child1Component {
   ){}
 
   displayCount(){
-    return this.signalService.getCount();
+    const count = this.signalService.getCount();
+    console.log("Child1Component: Current count is", count);
+    return count;
   }
 }

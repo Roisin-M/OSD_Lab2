@@ -15,6 +15,8 @@ export class Child2Component {
     ){}
     
     displayDoubleCount(){
-      return this.signalService.getDoubleCount();
+      const doubleCount = this.signalService.getDoubleCount();
+      console.log("Child2Component: Current double count is", doubleCount);
+      return doubleCount;
     }
 }

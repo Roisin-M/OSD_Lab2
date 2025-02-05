@@ -20,20 +20,29 @@ export class SignalService {
   doubleCount: Signal<number> = computed(() => this.count() * 2);
   //increment()
   increment(){
+    console.log("SignalService: Incrementing count");
     this.count.update(value => value + 1);
+    console.log("SignalService: Count after increment:", this.getCount());
   }
   //decrement() should not allow Count to go below 0
   decrement(){
     if(this.count()>0){
+      console.log("SignalService: Decrementing count");
       this.count.update(value => value - 1);
+      console.log("SignalService: Count after decrement:", this.getCount());
+    }
+    else{
+      console.log("SignalService: Cannot decrement. Count is already 0");
     }
   }
   //getCount()
   getCount(){
+    console.log("SignalService: getCount() called. Current count:", this.count());
     return this.count();
   }
   //getDoubleCount()
   getDoubleCount(){
+    console.log("SignalService: getDoubleCount() called. Current double count:", this.doubleCount());
     return this.doubleCount();
   }
 }
