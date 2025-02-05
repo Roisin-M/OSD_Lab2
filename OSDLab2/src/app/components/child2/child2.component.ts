@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SignalService } from '../../services/signal/signal.service';
 
 @Component({
   selector: 'app-child2',
@@ -8,5 +9,12 @@ import { Component } from '@angular/core';
   styleUrl: './child2.component.css'
 })
 export class Child2Component {
-  //retreive and display doubleCount
+    //retrive and display Count
+    constructor(
+      private signalService:SignalService
+    ){}
+    
+    displayDoubleCount(){
+      this.signalService.getDoubleCount();
+    }
 }

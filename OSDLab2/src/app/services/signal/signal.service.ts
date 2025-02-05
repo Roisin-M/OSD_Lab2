@@ -32,4 +32,8 @@ export class SignalService {
   getCount(){
     return this.count();
   }
+  //getDoubleCount()
+  getDoubleCount(){
+    return this.doubleCount();
+  }
 }

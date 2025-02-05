@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SignalService } from '../../../services/signal/signal.service';
 
 @Component({
   selector: 'app-child1',
@@ -9,4 +10,11 @@ import { Component } from '@angular/core';
 })
 export class Child1Component {
   //retrive and display Count
+  constructor(
+    private signalService:SignalService
+  ){}
+
+  displayCount(){
+    return this.signalService.getCount();
+  }
 }
